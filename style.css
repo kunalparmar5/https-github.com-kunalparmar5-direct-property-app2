@@ -1,0 +1,279 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Property Upload and Search Pages */
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkbox-group {
+    display: flex; /* Changed from block to flex for horizontal alignment */
+    align-items: center; /* Vertically align items in the center */
+    margin-bottom: 8px; /* Add some space between checkbox lines */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px; /* Space between checkbox and its label */
+    width: auto; /* Override default width for input if any */
+}
+
+.checkbox-group label {
+    margin-bottom: 0; /* Override default label margin if any */
+    font-weight: normal; /* Ensure label text is normal weight */
+    color: #555; /* Match other label colors */
+}
+
+
+/* Search Filters Specifics */
+.search-filters {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.search-filters .filter-group {
+    margin-bottom: 15px;
+}
+
+.search-filters .filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.search-filters .filter-group input[type="text"],
+.search-filters .filter-group input[type="number"],
+.search-filters .filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-filters fieldset {
+    margin-top: 15px; /* Add some space above fieldset in filters */
+}
+
+.search-filters button[type="submit"] {
+    width: auto; /* Allow button to size to content */
+    padding: 10px 20px; /* More padding for a better look */
+    background-color: #28a745; /* A different color for search */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-filters button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Property Listing Card (Basic Styling) */
+.search-results h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.property-listing-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.property-listing-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.property-listing-card img {
+    width: 100%;
+    max-width: 300px; /* Limit image width */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.property-listing-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.property-listing-card p {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95em;
+    text-align: left; /* Override general p text-align if it was center */
+}
+
+.property-listing-card p strong {
+    color: #333;
+}
+
+.property-listing-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.property-listing-card a:hover {
+    background-color: #0056b3;
+    text-decoration: none; /* Keep text decoration off on hover */
+}
+
+/* Ensure container on new pages also centers content if not already handled globally */
+/* This might be redundant if .container is already well-defined, but good for context */
+/* body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for pages with more content */
+/*    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px 0; /* Add padding for scrollable content */
+/* } */
+
+/* .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Wider for these content-heavy pages */
+/*    max-width: 800px; /* Max width for larger screens */
+/* } */
+
+/* Adjusting main container for potentially longer forms/pages */
+/* If .container is globally defined, these might need to be more specific or integrated */
+
+/* Basic Navigation Styles */
+.main-nav {
+    background-color: #333;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Center the nav items if container is wider */
+    text-align: center; /* Center the li elements */
+    max-width: 800px; /* Or your container max-width */
+}
+
+.main-nav ul li {
+    display: inline-block; /* Lay out items horizontally */
+    margin-right: 20px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Style for active page link if you implement that */
+    background-color: #555;
+    border-radius: 4px;
+}
+
+hr {
+  margin-bottom: 20px;
+}

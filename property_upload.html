@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="property_search.html">Search Properties</a></li>
+                <li><a id="uploadPropertyLink" href="property_upload.html" style="display: none;">Upload Property</a></li>
+                <li><a href="index.html" id="loginLink" style="display: none;">Login</a></li>
+                <li><a href="#" id="logoutButton" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+        <hr> 
+        <h2>Upload New Property</h2>
+        <form id="propertyUploadForm" enctype="multipart/form-data">
+            
+            <div class="input-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            
+            <fieldset>
+                <legend>Address</legend>
+                <div class="input-group">
+                    <label for="street">Street</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="input-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="input-group">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </div>
+            </fieldset>
+            
+            <div class="input-group">
+                <label for="price">Price / Rent Amount (USD)</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="bedrooms">Number of Bedrooms</label>
+                <input type="number" id="bedrooms" name="bedrooms" min="0" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="bathrooms">Number of Bathrooms</label>
+                <input type="number" id="bathrooms" name="bathrooms" min="0" step="0.5" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" name="propertyType" required>
+                    <option value="">Select Property Type</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                    <option value="condo">Condo</option>
+                    <option value="townhouse">Townhouse</option>
+                    <option value="land">Land</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="area">Area (sq ft)</label>
+                <input type="number" id="area" name="area" min="0">
+            </div>
+            
+            <fieldset>
+                <legend>Amenities</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="amenityParking" name="amenities" value="parking">
+                    <label for="amenityParking">Parking</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="amenityPool" name="amenities" value="pool">
+                    <label for="amenityPool">Pool</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="amenityGarden" name="amenities" value="garden">
+                    <label for="amenityGarden">Garden</label>
+                </div>
+                <!-- Add more amenities as needed -->
+            </fieldset>
+            
+            <div class="input-group">
+                <label for="photos">Photos (select multiple)</label>
+                <input type="file" id="photos" name="photos[]" multiple accept="image/*">
+            </div>
+            
+            <div class="input-group">
+                <label for="videos">Videos (select multiple)</label>
+                <input type="file" id="videos" name="videos[]" multiple accept="video/*">
+            </div>
+            
+            <button type="submit">Upload Property</button>
+        </form>
+    </div>
+    <!-- Link to a potential script.js for this page if needed later -->
+    <script src="property_upload_script.js"></script>
+    <script src="nav_script.js"></script>
+</body>
+</html>

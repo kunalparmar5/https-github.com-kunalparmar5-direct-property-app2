@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Properties</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="property_search.html">Search Properties</a></li>
+                <li><a id="uploadPropertyLink" href="property_upload.html" style="display: none;">Upload Property</a></li>
+                <li><a href="index.html" id="loginLink" style="display: none;">Login</a></li>
+                <li><a href="#" id="logoutButton" style="display: none;">Logout</a></li>
+            </ul>
+        </nav>
+        <hr> 
+        <h2>Search Properties</h2>
+        
+        <div class="search-filters">
+            <form id="searchFilterForm">
+                <div class="filter-group">
+                    <label for="searchLocation">Location (City, State, or Zip Code)</label>
+                    <input type="text" id="searchLocation" name="location">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchMinPrice">Min Price (USD)</label>
+                    <input type="number" id="searchMinPrice" name="min_price" step="1000">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchMaxPrice">Max Price (USD)</label>
+                    <input type="number" id="searchMaxPrice" name="max_price" step="1000">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchBedrooms">Min Bedrooms</label>
+                    <input type="number" id="searchBedrooms" name="bedrooms" min="0">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchPropertyType">Property Type</label>
+                    <select id="searchPropertyType" name="propertyType">
+                        <option value="">Any</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="condo">Condo</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="land">Land</option>
+                    </select>
+                </div>
+                
+                <fieldset>
+                    <legend>Filter by Amenities</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="filterAmenityParking" name="amenities" value="parking">
+                        <label for="filterAmenityParking">Parking</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="filterAmenityPool" name="amenities" value="pool">
+                        <label for="filterAmenityPool">Pool</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="filterAmenityGarden" name="amenities" value="garden">
+                        <label for="filterAmenityGarden">Garden</label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <div class="search-results">
+            <h3>Results</h3>
+            <!-- Property listings will be displayed here. Example of one listing: -->
+            <div class="property-listing-card">
+                <!-- <img src="placeholder_property_image.jpg" alt="Property Image" style="width:100%;max-width:300px;"> -->
+                <h4>Sample Property Title</h4>
+                <p><strong>Price:</strong> $500,000</p>
+                <p><strong>Location:</strong> Sample City, Sample State</p>
+                <p><strong>Details:</strong> 3 Bed, 2 Bath, Apartment</p>
+                <p><strong>Amenities:</strong> Parking, Pool</p>
+                <a href="#">View Details</a>
+            </div>
+            
+            <div class="property-listing-card">
+                <!-- <img src="placeholder_property_image.jpg" alt="Property Image" style="width:100%;max-width:300px;"> -->
+                <h4>Another Great House</h4>
+                <p><strong>Price:</strong> $750,000</p>
+                <p><strong>Location:</strong> Another Town, Sample State</p>
+                <p><strong>Details:</strong> 4 Bed, 3 Bath, House</p>
+                <p><strong>Amenities:</strong> Parking, Garden, Air Conditioning</p>
+                <a href="#">View Details</a>
+            </div>
+            <!-- End of example listings -->
+        </div>
+        
+    </div>
+    <!-- Link to a potential script.js for this page if needed later -->
+    <script src="property_search_script.js"></script>
+    <script src="nav_script.js"></script>
+</body>
+</html>
